@@ -122,31 +122,31 @@ def fetch_and_upload_data():
     # Debug gerado pelo Chat GPT para conferir se os dados foram enviados para o S3 
     print("Iniciando envio de dados para o S3...")
     if areas:
-        upload_to_s3_habitify(f"habitify_data/{actual_date_yyyymmdd}/areas.json", areas)
+        upload_to_s3_habitify(f"{actual_date_yyyymmdd}/areas.json", areas)
         print("✅ Envio de areas.json concluído.")
     else:
         print("⚠️ Nenhum dado disponível para áreas. Upload não realizado.")
 
     if moods:
-        upload_to_s3_habitify(f"habitify_data/{actual_date_yyyymmdd}/moods.json", moods)
+        upload_to_s3_habitify(f"{actual_date_yyyymmdd}/moods.json", moods)
         print("✅ Envio de moods.json concluído.")
     else:
         print("⚠️ Nenhum dado disponível para moods. Upload não realizado.")
 
     if notes:
-        upload_to_s3_habitify(f"habitify_data/{actual_date_yyyymmdd}/notes.json", notes)
+        upload_to_s3_habitify(f"{actual_date_yyyymmdd}/notes.json", notes)
         print("✅ Envio de notes.json concluído.")
     else:
         print("⚠️ Nenhum dado disponível para notes. Upload não realizado.")
         
     if habits:
-        upload_to_s3_habitify(f"habitify_data/{actual_date_yyyymmdd}/habits.json", habits)
+        upload_to_s3_habitify(f"{actual_date_yyyymmdd}/habits.json", habits)
         print("✅ Envio de notes.json concluído.")
     else:
         print("⚠️ Nenhum dado disponível para notes. Upload não realizado.")
 
     if journal:
-        upload_to_s3_habitify(f"habitify_data/{actual_date_yyyymmdd}/journal.json", journal)
+        upload_to_s3_habitify(f"{actual_date_yyyymmdd}/journal.json", journal)
         print("✅ Envio de notes.json concluído.")
     else:
         print("⚠️ Nenhum dado disponível para notes. Upload não realizado.")
