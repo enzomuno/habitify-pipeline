@@ -25,11 +25,11 @@ jobs:
 
       - name: Run script 
         env:
-          API_KEY: ${{ secrets.DB_HOST_PROD }}
-          AWS_ACCESS_KEY_ID: ${{ secrets.DB_USER_PROD }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.DB_PASSWORD_PROD }}
-          AWS_DEFAULT_REGION: ${{ secrets.DB_NAME_PROD }}
-          AWS_S3_BUCKET_NAME_HABITIFY: ${{ secrets.DB_PORT_PROD }}
+          API_KEY: ${{ secrets.API_KEY }}
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_DEFAULT_REGION: ${{ secrets.AWS_DEFAULT_REGION }}
+          AWS_S3_BUCKET_NAME_HABITIFY: ${{ secrets.AWS_S3_BUCKET_NAME_HABITIFY }}
 
         run: |
           python -m src.main
