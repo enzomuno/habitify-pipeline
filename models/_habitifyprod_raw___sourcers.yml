@@ -1,0 +1,17 @@
+version: 2
+
+sources:
+  - name: raw
+    database: habitifyprod
+    schema: raw
+    tables:
+      - name: areas
+        description: "Tabela contendo os dados raw de 'areas' cadastradas, que representam as categorias de hábitos (ex: saúde, produtividade, etc.). Cada área pode conter múltiplos hábitos relacionados."
+      - name: habits
+        description: "Tabela contendo os dados raw de 'habits' cadastrados, que são os hábitos individuais dentro de cada 'area'. Cada hábito possui informações sobre o nome, descrição, e frequência de registro."
+      - name: journal
+        description: "Tabela contendo os dados raw de 'journal' ou 'diário' de hábitos, que inclui registros diários de progresso e reflexões dos usuários sobre cada hábito. Cada entrada é associada a um hábito específico."
+      - name: moods
+        description: "Tabela contendo os dados raw de 'moods' ou 'humores' registrados diariamente, associando um estado emocional ao progresso do usuário em seus hábitos. Os humores podem refletir o bem-estar relacionado ao progresso do hábito."
+      - name: notes
+        description: "Tabela contendo os dados raw de 'notes' ou 'notas' registradas pelos usuários. Essas notas são entradas de texto associadas aos hábitos, permitindo uma análise qualitativa do progresso ou dificuldades encontradas."
