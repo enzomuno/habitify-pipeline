@@ -1,5 +1,5 @@
 # dbt-habitify Project Configuration
-name: 'dbt-habitify'
+name: 'dbt_habitify'
 version: '1.0.0'
 config-version: 2
 
@@ -20,7 +20,7 @@ clean-targets:
 
 # Model materializations configuration
 models:
-  dbt-habitify:
+  dbt_habitify:
     
     # Staging Layer - Use views for staging as well, as data might still need further transformation
     staging:
