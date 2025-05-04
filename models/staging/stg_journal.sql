@@ -13,6 +13,7 @@ processed AS (
         raw:"progress"::variant:"periodicity"::VARCHAR(15)         AS periodicity,
         (raw:"progress"::variant:"target_value")::numeric          AS target_value,
         (raw:"progress"::variant:"current_value")::numeric         AS current_value,
+        raw:"status"::string                                       AS status,
         raw:"progress"::variant:"reference_date"                   AS reference_date
     from source
 )
