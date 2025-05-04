@@ -1,0 +1,35 @@
+# dbt-habitify Project Configuration
+name: 'dbt-habitify'
+version: '1.0.0'
+config-version: 2
+
+# Profile setup
+profile: 'default'
+
+# File paths configuration
+model-paths: ["models"]
+analysis-paths: ["analyses"]
+test-paths: ["tests"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+snapshot-paths: ["snapshots"]
+target-path: "target"
+clean-targets:
+  - "target"
+  - "dbt_packages"
+
+# Model materializations configuration
+models:
+  dbt-habitify:
+    
+    # Staging Layer - Use views for staging as well, as data might still need further transformation
+    staging:
+      +materialized: view  # Mais flexível e acessível rapidamente
+
+    # Core Layer - Switch to tables for better performance when querying structured data
+    core:
+      +materialized: table  # Melhor performance para grandes volumes de dados transformados
+
+    # Mart Layer - Use tables here for reporting and analytics, as these are finalized data models
+    mart:
+      +materialized: table  # Mais eficiente em termos de leitura para análise final
